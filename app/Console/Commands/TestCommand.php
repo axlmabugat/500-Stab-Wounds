@@ -28,11 +28,6 @@ class TestCommand extends BaseTestCommand
         {--c|custom-argument : Add custom env variables}
 ';
 
-    /**
-     * Get the PHP binary to execute.
-     *
-     * @return array
-     */
     protected function binary()
     {
         $binary = parent::binary();
@@ -49,11 +44,6 @@ class TestCommand extends BaseTestCommand
         return array_merge([PHP_BINARY], $binary);
     }
 
-    /**
-     * Get the array of environment variables for running PHPUnit.
-     *
-     * @return array
-     */
     protected function phpunitEnvironmentVariables()
     {
         if ($this->option('custom-argument')) {
@@ -69,11 +59,6 @@ class TestCommand extends BaseTestCommand
         return parent::phpunitEnvironmentVariables();
     }
 
-    /**
-     * Get the array of environment variables for running Paratest.
-     *
-     * @return array
-     */
     protected function paratestEnvironmentVariables()
     {
         if ($this->option('custom-argument')) {
@@ -89,34 +74,16 @@ class TestCommand extends BaseTestCommand
         return parent::paratestEnvironmentVariables();
     }
 
-    /**
-     * Get the array of arguments for running PHPUnit.
-     *
-     * @param  array  $options
-     * @return array
-     */
     protected function phpunitArguments($options)
     {
         return parent::phpunitArguments($this->filterCustomOption($options));
     }
 
-    /**
-     * Get the array of arguments for running Paratest.
-     *
-     * @param  array  $options
-     * @return array
-     */
     protected function paratestArguments($options)
     {
         return parent::paratestArguments($this->filterCustomOption($options));
     }
 
-    /**
-     * Filters my custom argument from options list.
-     *
-     * @param  array  $options
-     * @return array
-     */
     protected function filterCustomOption($options)
     {
         return array_values(array_filter($options, function ($option) {
