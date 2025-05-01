@@ -49,7 +49,7 @@
         padding: 24px;
         margin-bottom: 24px;
     }
-    .SPEED-RACER {
+    .chart {
         margin-top: 40px;
         text-align: center;
         font-family: 'Montserrat', Arial, sans-serif;
@@ -108,24 +108,9 @@
         </div>
     </div>
 
-    <div class="SPEED-RACER">
-        “Here he comes, here comes Speed Racer
-He's a demon on wheels
-He's a demon and he's gonna be chasing after someone
-He's gaining on you so you'd better look alive
-He's busy revving up the powerful Mach 5
-And when the odds are against him and there's dangerous work to do
-You bet your life Speed Racer will see it through
-Go Speed Racer!
-Go Speed Racer!
-Go Speed Racer Go!
-He's off and flying as he guns the car around the track
-He's jamming down the pedal like he's never coming back
-Adventure's waiting just ahead
-Go Speed Racer!
-Go Speed Racer!
-Go Speed Racer Go!.”<br>
-        - VROOOOM! VROOOOM!<br>
+    <div class="chart">
+        “Chart Breakdown”<br>
+        Laravel Chart<br>
     </div>
 </div>
 
